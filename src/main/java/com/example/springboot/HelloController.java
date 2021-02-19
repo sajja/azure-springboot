@@ -17,7 +17,7 @@ public class HelloController {
 
     @RequestMapping("/vault")
     public String vault() {
-        return "Greetings from Spring Boot VAULT!";
+        return "Greetings from Spring Boot VAULT 123";
     }
 
     @RequestMapping("/mysql")
