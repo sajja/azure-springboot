@@ -15,6 +15,11 @@ public class HelloController {
         return "Greetings from Spring Boot MASTER!";
     }
 
+    @RequestMapping("/vault")
+    public String vault() {
+        return "Greetings from Spring Boot VAULT!";
+    }
+
     @RequestMapping("/mysql")
     public String mysql() throws Exception {
         try (Connection conn = DriverManager.getConnection(
