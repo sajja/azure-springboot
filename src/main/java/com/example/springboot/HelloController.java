@@ -16,12 +16,12 @@ public class HelloController {
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot MASTER!";
+        return "Greetings from Spring Boot MASTER ZZ!";
     }
 
     @RequestMapping("/vault")
     public String vault() {
-        return "Greetings from Spring Boot VAULT : " + keyVaultMessage;
+        return "Greetings from Spring Boot VAULT ZZZZ : " + keyVaultMessage;
     }
 
     @RequestMapping("/mysql")
