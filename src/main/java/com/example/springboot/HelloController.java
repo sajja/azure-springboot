@@ -1,5 +1,6 @@
 package com.example.springboot;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,6 +11,9 @@ import java.sql.SQLException;
 @RestController
 public class HelloController {
 
+    @Value("${connectionString}")
+    private String keyVaultMessage;
+
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot MASTER!";
@@ -17,7 +21,7 @@ public class HelloController {
 
     @RequestMapping("/vault")
     public String vault() {
-        return "Greetings from Spring Boot VAULT 123";
+        return "Greetings from Spring Boot VAULT : " + keyVaultMessage;
     }
 
     @RequestMapping("/mysql")
