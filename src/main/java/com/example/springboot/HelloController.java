@@ -11,17 +11,17 @@ import java.sql.SQLException;
 @RestController
 public class HelloController {
 
-    @Value("${connectionString}")
+//    @Value("${connectionString}")
     private String keyVaultMessage;
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot MASTER ZZ!";
+        return "Greetings from Spring Boot MASTER!";
     }
 
     @RequestMapping("/vault")
     public String vault() {
-        return "Greetings from Spring Boot VAULT ZZZZ : " + keyVaultMessage;
+        return "Greetings from Spring Boot VAULT: " + keyVaultMessage;
     }
 
     @RequestMapping("/mysql")

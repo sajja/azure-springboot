@@ -14,23 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Application {
-    @Value("${connectionString}")
-    private String connectionString = "defaultValue\n";
+//    @Value("${connectionString}")
+//    private String connectionString = "defaultValue\n";
 
-    @GetMapping("get")
-    public String get() {
-        return connectionString;
-    }
-
+//    @GetMapping("get")
+//    public String get() {
+//        return connectionString;
+//    }
+//
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(HelloController.class, args);
     }
 
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n", connectionString));
-            System.out.println("1111Let's inspect the beans provided by Spring Boot:");
+            System.out.println("Let's inspect the beans provided by Spring Boot:");
 
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
