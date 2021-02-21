@@ -29,5 +29,5 @@ jobs:
       with:
         app-name: 'sajith-sb'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bdfe986bf27b4bcbacfdd9eb9ecc93c4 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1893620e622c48b0b76d963ca55a5f0d }}
         package: '${{ github.workspace }}/target/*.jar'
